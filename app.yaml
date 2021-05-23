@@ -1,0 +1,10 @@
+runtime: nodejs12
+
+handlers:
+  - url: /
+    static_files: www/index.html
+    upload: www/index.html
+
+  - url: /(www/.*)$
+    static_files: www/\1.html
+    upload: www/.*\.html$
